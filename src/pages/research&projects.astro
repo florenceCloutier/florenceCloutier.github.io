@@ -1,0 +1,254 @@
+---
+import PageLayout from "@/layouts/Base.astro";
+
+const meta = {
+	description: "I'm a starter theme for Astro.build",
+	title: "Research & Projects",
+};
+---
+
+<PageLayout meta={meta}>
+	<h1 class="title mt-8 mb-12">Research & Projects</h1>
+
+	<section class="text-text space-y-12">
+		<!-- RESEARCH SECTION -->
+		<section id="research" class="space-y-10">
+			<h2 class="mb-1 text-2xl font-semibold">Research</h2>
+			<hr class="border-border mb-8" />
+
+			<!-- ========== PAPER 1 ========== -->
+			<div class="space-y-4">
+				<!-- Top: full-width meta -->
+				<div class="space-y-2">
+					<h3 class="text-lg font-semibold">
+						1. Hierarchical RL & Tree Search for Power Grid Control
+					</h3>
+
+					<a
+						href="https://openreview.net/pdf?id=SaY2IgSsDK"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="text-accent block font-semibold underline underline-offset-2"
+					>
+						Scalable Tree Search over Graphs with Learned Action Pruning for Power Grid Control
+					</a>
+
+					<p class="text-subtext text-sm leading-relaxed italic">
+						Florence Cloutier, Cyrus Neary, Adriana Hugessen, Viktor Todosijević, Zina Kamel, Glen
+						Berseth
+					</p>
+
+					<p class="text-subtext text-sm leading-relaxed">
+						RLC 2025 Workshop on Practical Insights into Reinforcement Learning for Real Systems.
+					</p>
+				</div>
+
+				<!-- Bottom: 2 columns (image | description) -->
+				<div class="grid items-start gap-4 md:grid-cols-[minmax(0,220px)_minmax(0,1fr)]">
+					<div>
+						<img
+							src="/HERO-GT.jpg"
+							alt="HERO-GT: hierarchical RL and tree search for power grid control"
+							class="border-border w-full max-w-xs rounded border object-cover"
+						/>
+					</div>
+
+					<div>
+						<p class="text-subtext text-sm leading-relaxed">
+							We propose a hierarchical learning and planning framework for large-scale power-grid
+							control. A heterogeneous GNN first identifies the most relevant subgraph to act on,
+							reducing the action and observation space. A tree-search procedure is then applied
+							locally over this region to evaluate topological actions, showing that combining
+							structure-aware graph representations with search improves efficiency and
+							generalization across different grid topologies.
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- ========== PAPER 2 ========== -->
+			<div class="space-y-4">
+				<!-- Top: full-width meta -->
+				<div class="space-y-2">
+					<h3 class="text-lg font-semibold">
+						2. Multi-Agent Molecular Generation under Multi-Property Constraints
+					</h3>
+
+					<a
+						href="https://openreview.net/pdf?id=jH1UE2QiDe"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="text-accent block font-semibold underline underline-offset-2"
+					>
+						M4oLGen: Multi-Agent, Multi-Stage Molecular Generation under Precise Multi-Property
+						Constraints
+					</a>
+
+					<p class="text-subtext text-sm leading-relaxed italic">
+						Yizhan Li, Florence Cloutier, Sifan Wu, Ali Parviz, Boris Knyazev, Yan Zhang, Glen
+						Berseth, Bang Liu
+					</p>
+
+					<p class="text-subtext text-sm leading-relaxed">
+						Under review at the International Conference on Learning Representations (ICLR), 2026.
+					</p>
+				</div>
+
+				<!-- Bottom: 2 columns (image | description) -->
+				<div class="grid items-start gap-4 md:grid-cols-[minmax(0,220px)_minmax(0,1fr)]">
+					<div>
+						<!-- Ideally use a JPG/PNG thumbnail instead of a raw PDF.
+             If you export one, replace this <embed> by an <img> like above. -->
+						<embed
+							src="/Mol4Gen.pdf#page=1"
+							type="application/pdf"
+							class="border-border h-40 w-full max-w-xs rounded border"
+						/>
+					</div>
+
+					<div>
+						<p class="text-subtext text-sm leading-relaxed">
+							We introduce a multi-agent, multi-stage pipeline for controllable molecule generation,
+							where specialized agents collaborate to satisfy multiple structural and chemical
+							constraints. The system progressively refines molecules across stages, achieving both
+							diversity and precise satisfaction of property targets, offering a scalable framework
+							for realistic multi-objective molecular design.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- PROJECTS SECTION -->
+		<section id="projects" class="space-y-6">
+			<h2 class="mb-2 text-2xl font-semibold">Projects</h2>
+			<hr class="border-border my-4" />
+
+			<p class="text-subtext text-sm leading-relaxed">
+				These are some relevant projects I worked on during my master's and undergraduate degrees.
+			</p>
+
+			<div class="space-y-6">
+				<!-- Bayesian GNNs for OPF -->
+				<article class="border-border bg-global-bg/40 space-y-2 rounded border p-4">
+					<h3 class="text-base font-semibold">
+						Bayesian Graph Neural Networks for the Optimal Power Flow Problem
+					</h3>
+					<p class="text-subtext text-xs tracking-wide uppercase">Mila · 2024</p>
+					<p class="text-subtext text-sm leading-relaxed">
+						Explored uncertainty-aware graph learning methods for power system optimization using
+						Bayesian GNNs on the Optimal Power Flow (OPF) problem.
+					</p>
+					<ul class="text-subtext list-disc space-y-1 pl-5 text-sm leading-relaxed">
+						<li>
+							Developed a Bayesian GNN model combining approximate inference techniques such as
+							variational inference, Monte Carlo sampling, Monte Carlo dropout, and ensemble methods
+							to capture predictive uncertainty.
+						</li>
+						<li>
+							Implemented a baseline following the CANOS paper (Piloto et al., 2024) using the
+							<code class="text-xs">OPFDataset</code> to benchmark performance on OPF.
+						</li>
+						<li>
+							Applied constraint-aware learning with Lagrangian relaxation and dual methods in the
+							loss function to enforce physical and engineering feasibility.
+						</li>
+						<li>
+							Demonstrated that the Bayesian approach improves generalization, provides calibrated
+							uncertainty estimates, and enhances robustness for high-stakes power grid decisions.
+						</li>
+					</ul>
+				</article>
+
+				<!-- Autonomous Driving / Duckietown -->
+				<article class="border-border bg-global-bg/40 space-y-2 rounded border p-4">
+					<h3 class="text-base font-semibold">Autonomous Driving – Duckietown</h3>
+					<p class="text-subtext text-xs tracking-wide uppercase">
+						Université de Montréal · Duckietown Class · 2024
+					</p>
+					<p class="text-subtext text-sm leading-relaxed">
+						Applied simplified inverse reinforcement learning (IRL) and DrQv2 for autonomous driving
+						control in the Duckietown environment.
+					</p>
+					<ul class="text-subtext list-disc space-y-1 pl-5 text-sm leading-relaxed">
+						<li>
+							Implemented a simplified IRL approach combining a predefined reward function with
+							learned residuals to preserve interpretability while improving performance.
+						</li>
+						<li>
+							Used expert trajectories to fine-tune the reward function so the agent learns
+							realistic driving constraints.
+						</li>
+						<li>
+							Showed that the IRL agent learned subtle behaviours such as staying in the right lane,
+							while a pure RL agent tended to drive on the left.
+						</li>
+					</ul>
+				</article>
+
+				<!-- Exploration Drones -->
+				<article class="border-border bg-global-bg/40 space-y-2 rounded border p-4">
+					<h3 class="text-base font-semibold">
+						Exploration Drones – Web-Controlled Multi-Drone System
+					</h3>
+					<p class="text-subtext text-xs tracking-wide uppercase">
+						Polytechnique Montréal · Jan 2023 – May 2023 · Python · TypeScript · C++
+					</p>
+					<p class="text-subtext text-sm leading-relaxed">
+						Built an interactive system to control exploration drones and visualize their mapping of
+						unknown environments.
+					</p>
+					<ul class="text-subtext list-disc space-y-1 pl-5 text-sm leading-relaxed">
+						<li>
+							Developed a Vue-based web application to control drones and display their live
+							exploration map.
+						</li>
+						<li>
+							Implemented the exploration algorithm on the embedded system to explore and map
+							unknown terrain while avoiding obstacles in multi-drone scenarios.
+						</li>
+					</ul>
+				</article>
+
+				<!-- Data Structures / Package-Delivery Drones -->
+				<article class="border-border bg-global-bg/40 space-y-2 rounded border p-4">
+					<h3 class="text-base font-semibold">Package Delivery Drone System for Montréal</h3>
+					<p class="text-subtext text-xs tracking-wide uppercase">
+						Data Structures Project · Polytechnique Montréal · May 2020 – Aug 2020 · Java
+					</p>
+					<p class="text-subtext text-sm leading-relaxed">
+						Designed algorithms to reduce energy consumption in a fleet of delivery drones.
+					</p>
+					<ul class="text-subtext list-disc space-y-1 pl-5 text-sm leading-relaxed">
+						<li>
+							Assigned packages to drones based on weight, size, availability, and route cost using
+							Dijkstra’s shortest path algorithm.
+						</li>
+						<li>Improved overall fleet efficiency by optimizing routing and load balancing.</li>
+					</ul>
+				</article>
+
+				<!-- Embedded Systems / Covid-Distance Robot -->
+				<article class="border-border bg-global-bg/40 space-y-2 rounded border p-4">
+					<h3 class="text-base font-semibold">Embedded Robot for Covid Distancing</h3>
+					<p class="text-subtext text-xs tracking-wide uppercase">
+						Embedded Systems Project · Polytechnique Montréal · Jan 2020 – May 2020 · C++
+					</p>
+					<p class="text-subtext text-sm leading-relaxed">
+						Developed an embedded robot that maintains preventive distances from people in a crowd.
+					</p>
+					<ul class="text-subtext list-disc space-y-1 pl-5 text-sm leading-relaxed">
+						<li>
+							Programmed a finite state machine defining the robot’s reaction to six different
+							proximity scenarios.
+						</li>
+						<li>
+							Improved development efficiency by scripting automated deployment of the embedded
+							code.
+						</li>
+					</ul>
+				</article>
+			</div>
+		</section>
+	</section>
+</PageLayout>
