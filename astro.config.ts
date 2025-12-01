@@ -37,20 +37,20 @@ export default defineConfig({
 			short_name: "", // optional
 			description: siteConfig.description,
 			lang: siteConfig.lang,
-			icon: "public/tree-graph-icon.png", // the source for generating favicon & icons
+			icon: "tree-graph-icon.png", // the source for generating favicon & icons
 			icons: [
 				{
-					src: "public/tree-graph-icon.png", // used in src/components/BaseHead.astro L:26
+					src: "tree-graph-icon.png", // used in src/components/BaseHead.astro L:26
 					sizes: "180x180",
 					type: "image/png",
 				},
 				{
-					src: "public/tree-graph-icon.png",
+					src: "tree-graph-icon.png",
 					sizes: "192x192",
 					type: "image/png",
 				},
 				{
-					src: "public/tree-graph-icon.png",
+					src: "tree-graph-icon.png",
 					sizes: "512x512",
 					type: "image/png",
 				},
